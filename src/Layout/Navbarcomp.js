@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navbar,Nav,Container} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Headermenu from './Headermenu';
 // import { NavLink } from 'react-router-dom'
 // import { Link } from 'react-router-dom';
@@ -10,7 +11,7 @@ const Navbarcomp = () => {
     <div className='header_sec'>
    <Navbar  expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#"><img src="assets/img/ikore-pilates-logo.png" className="logo_img" alt=""/></Navbar.Brand>
+        <Link className='logo_link' to="/"><img src="assets/img/ikore-pilates-logo.png" className="logo_img" alt=""/></Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
