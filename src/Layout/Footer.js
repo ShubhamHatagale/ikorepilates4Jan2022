@@ -20,11 +20,19 @@ const Footer = () => {
 
 
         <div className=" mt-5 text-dark text-center row" >
-          <div style={{ flex: "0 0 auto", width: "40%" }}></div>
-          <Link  style={{ flex: "0 0 auto", width: "8.5%", fontWeight: "500px", cursor: "pointer", fontSize: "20px", color: "black" }} >Terms</Link>
-          <div  style={{ flex: "0 0 auto", width: "2%", fontWeight: "500px", cursor: "pointer", fontSize: "20px", color: "black" }}>|</div>
-          <Link  style={{ flex: "0 0 auto", width: "12%", fontWeight: "500px", cursor: "pointer", fontSize: "20px", color: "black" }} >Privacy Policy</Link>
-          <div style={{ flex: "0 0 auto", width: "40%" }}></div>
+          <div style={{ fontWeight: "500px", cursor: "pointer", fontSize: "20px", color: "black" }}>
+            {/* style={{ flex: "0 0 auto", width: "40%" }} */}
+            <Link to="/terms_policy" >Cancellation and Other Policy </Link>
+
+            {/* <Link onClick={()=>window.location.replace("https://www.befitpilates.in/cancellation-and-other-policy")} >Terms </Link> */}
+            {/* style={{ flex: "0 0 auto", width: "8.5%", fontWeight: "500px", cursor: "pointer", fontSize: "20px", color: "black" }}  */}
+            {/* <div   >|</div> */}
+            {/* <span style={{padding:"0px 5px 0px 5px"}}>|</span> */}
+            {/* style={{ flex: "0 0 auto", width: "2%", fontWeight: "500px", cursor: "pointer", fontSize: "20px", color: "black" }} */}
+            {/* <Link onClick={()=>window.location.replace("https://www.befitpilates.in/cancellation-and-other-policy")} > Privacy Policy</Link> */}
+            {/* style={{ flex: "0 0 auto", width: "12%", fontWeight: "500px", cursor: "pointer", fontSize: "20px", color: "black" }} */}
+          </div>
+          {/* style={{ flex: "0 0 auto", width: "40%" }} */}
 
         </div>
       </div>

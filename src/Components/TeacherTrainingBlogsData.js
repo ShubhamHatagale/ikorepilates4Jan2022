@@ -2,7 +2,7 @@ const $TeacherTrainingBlogsData =[
 
     {
         id:1,
-        post_title:'Movement Principle',
+        post_title:'Movement Principle', 
         post_img_link:'#',
         post_imgsrc:'assets/img/movement.png',
         post_title_link:'#',

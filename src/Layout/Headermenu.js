@@ -9,7 +9,7 @@ const Headermenu = () => {
   return (
     <div className='top_menu'>
       <ul className='navbar_list'>
-        <li><NavHashLink activeclassname="active_class" to='/#'>Home</NavHashLink></li>
+        <li><NavHashLink activeclassname="active_class" to='/'>Home</NavHashLink></li>
         <li>
           {/* <NavLink activeclassname="active_class" to='/about'> */}
           <div class="dropdown">

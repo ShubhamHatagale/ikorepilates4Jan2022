@@ -22,7 +22,7 @@ const FlashMessage = () => {
 
   return (
     <>
-      {DisableStatus.length == 0 ? (
+      {DisableStatus.length == 5 ? (
         <section className='FlashMessage_section pd2 text-center' style={{ background: "#EB8A13", height: "100px", color: "white" }}>
           <div style={{ color: "white", border: "1px solid black", width: "50px", height: "40px", position: "relative", left: "97%" }}>
             <button type="button" onClick={handleClose} className="btn-close btn-close-white " aria-label="Close"></button>

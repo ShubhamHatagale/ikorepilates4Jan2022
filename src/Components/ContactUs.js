@@ -133,7 +133,7 @@ const ContactUs = () => {
                       onChange={handleChange}
                       as="textarea" rows={3}
                       name="message" />
-                    <p className='form_error_message'>{formErrors.message}</p>
+                    {/* <p className='form_error_message'>{formErrors.message}</p> */}
                   </Form.Group>
                 </Row>
 

@@ -9,7 +9,7 @@ const Aboutsection = () => {
 
         <div className="row">
           <div className="col-lg-6">
-            <img src="assets/img/hero-img.png" className="img-fluid" alt=""/>
+            <img src="assets/img/hero-img.png" className="img-fluid responsive" alt=""/>
           </div>
           <div className="col-lg-6 pt-4 pt-lg-0 content">
             <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbarcomp from './Layout/Navbarcomp';
 import Footer from './Layout/Footer';
-import FlashMessage from './Layout/FlashMessage';
+// import FlashMessage from './Layout/FlashMessage';
 import Home from './Pages/Home';
 import CopyRightFooter from './Layout/CopyRightFooter';
 import Classes from './Pages/Classes';
@@ -13,6 +13,7 @@ import Contact from './Pages/Contact';
 import OurTeams from './Pages/OurTeams';
 import WhyChooseUs from './Pages/WhyChooseUs';
 import Certification from './Pages/Certification';
+import TermsPolicy from './Layout/TermsPolicy';
 
 
 function Router() {
@@ -21,7 +22,7 @@ function Router() {
 
       <BrowserRouter>
         {/* <Headermenu/> */}
-        <FlashMessage />
+        {/* <FlashMessage /> */}
 
         <Navbarcomp />
         <Routes>
@@ -34,6 +35,8 @@ function Router() {
           <Route exact path='/our_team' element={<OurTeams />} />
           <Route exact path='/why_choose_us' element={<WhyChooseUs />} />
           <Route exact path='/certification' element={<Certification />} />
+          <Route exact path='/terms_policy' element={<TermsPolicy />} />
+
         </Routes>
         <Footer />
         <CopyRightFooter />

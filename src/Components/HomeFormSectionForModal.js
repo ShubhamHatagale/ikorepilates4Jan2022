@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -8,7 +8,6 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaListAlt } from "react-icons/fa";
-import { json } from 'react-router-dom';
 import TeacherTrainingBlogsData from './TeacherTrainingBlogsData'
 import { useForm } from 'react-hook-form';
 
@@ -23,10 +22,6 @@ const HomeFormSection = (props) => {
 
 
   // 3
-  const initialValues = { name: "", email: "", phone: "", course: "", message: "" };
-  const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
   const [display, setdisplay] = useState(false);
 
   const API_URL = process.env.REACT_APP_Base_URL;
@@ -40,36 +35,23 @@ const HomeFormSection = (props) => {
     // return false
 
     var myHeaders = new Headers();
-    myHeaders.append('Content-Type', 'application/json') 
-    // myHeaders.append("Authorization");
+    myHeaders.append('Content-Type', 'application/json')
     // myHeaders.append("Authorization", `Basic WXUxOXQxbkUwVGpNd254eUQ5Og==`);
 
-    
+     
     fetch(`${API_URL}/enroll/course`,
       {
         method: 'POST',
         headers: myHeaders,
-        // headers: {
-        //   'Accept': 'application/json',
-        //   'Content-Type': 'application/json',
-        //   'Authorization': "Basic WXUxOXQxbkUwVGpNd254eUQ5Og==' \"
-        // },
+      
         body: JSON.stringify(data)
       }).then((data) => { return data.json() }).then((result) => {
         console.log(result)
-        setIsSubmit(true);
         setdisplay(true)
         reset();
 
         setTimeout(() => {
-          setIsSubmit(false);
           setdisplay(false)
-          // data=[]
-          // for (const prop of Object.getOwnPropertyNames(data)) {
-          //   delete data[prop];
-          // }
-
-          console.log(data)
         }, 5000);
         // if (isSubmit)
         // alert("data is submited");
@@ -92,46 +74,47 @@ const HomeFormSection = (props) => {
 
             <Form className='home_form' onSubmit={handleSubmit(onSubmit)}>
               <Row className="mb-2 home_from_row">
+                
                 <Form.Group className='col-md-6' controlId="formGridName">
-                  <Form.Label>Name</Form.Label>
+                  <Form.Label className='modal_label'>Name</Form.Label>
                   <Form.Control
                     type="text"
                     {...register('name', { required: true, pattern: [/[a-z]/, /[A-Z]/, /[0-9]/] })}
                     name="name"
                     placeholder="Enter Name"
                   />
-                  <FaUserCircle className='form_icon' />
-                  {errors.name && <p className='form_error_message'>Please Enter Name</p>}
+                  <FaUserCircle className='form_icon_modal' />
+                  {errors.name && <p className='form_error_message modal_error_msg'>Please Enter Name</p>}
                 </Form.Group>
 
                 <Form.Group className='col-md-6' controlId="formGridEmail">
-                  <Form.Label>Email</Form.Label>
+                  <Form.Label className='modal_label'>Email</Form.Label>
                   <Form.Control
                     type="text"
                     {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i })}
                     name="email"
                     placeholder="Enter email"
                   />
-                  <FaEnvelope className='form_icon' />
-                  {errors.email && <p className='form_error_message'>Please Check Email</p>}
+                  <FaEnvelope className='form_icon_modal' />
+                  {errors.email && <p className='form_error_message modal_error_msg'>Please Check Email</p>}
                 </Form.Group>
 
               </Row>
 
               <Row className="mb-2 home_from_row">
                 <Form.Group className='col-md-6' controlId="formGridPhone">
-                  <Form.Label>Phone</Form.Label>
+                  <Form.Label className='modal_label'>Phone</Form.Label>
                   <Form.Control
                     type="number"
                     {...register('phone', { required: true, maxLength: 10, minLength: 10, })}
                     name="phone"
                     placeholder="Enter Phone Number" />
-                  <FaPhoneAlt className='form_icon' />
-                  {errors.phone && <p className='form_error_message'>Please Enter 10 Digit Phone Number</p>}
+                  <FaPhoneAlt className='form_icon_modal' />
+                  {errors.phone && <p className='form_error_message modal_error_msg'>Please Enter 10 Digit Phone Number</p>}
                 </Form.Group>
 
                 <Form.Group className='col-md-6' controlId="formGridState">
-                  <Form.Label>Course</Form.Label>
+                  <Form.Label className='modal_label'>Course</Form.Label>
                   <Form.Select
                     name="course"
                     {...register('course', { required: true })}
@@ -140,27 +123,27 @@ const HomeFormSection = (props) => {
                     <option value=""></option>
                     {TeacherTrainingBlogsData.map((item, id) => {
                       return (
-                        <option selected={item.id == blogId ? true : false} value={item.post_title}>{item.post_title}</option>
+                        <option selected={item.id === blogId ? true : false} value={item.post_title}>{item.post_title}</option>
                       )
                     })}
                   </Form.Select>
-                  <FaListAlt className='form_icon' />
-                  {errors.course && <p className='form_error_message'>Please Select Course </p>}
+                  <FaListAlt className='form_icon_modal' />
+                  {errors.course && <p className='form_error_message modal_error_msg'>Please Select Course </p>}
                 </Form.Group>
               </Row>
 
               <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridPhone">
-                  <Form.Label>Message</Form.Label>
+                  <Form.Label className='modal_label'>Message</Form.Label>
                   <Form.Control
                     as="textarea" rows={3}
                     {...register('message', { required: true, pattern: [/[a-z]/, /[A-Z]/, /[0-9]/] })}
                     name="message"
                   />
-                  {errors.message && <p className='form_error_message'>Please Enter Message</p>}
+                  {errors.message && <p className='form_error_message modal_error_msg' >Please Enter Message </p>}
                 </Form.Group>
               </Row>
-
+           
 
               <Button className='form_btn' type="submit" >
                 Submit
