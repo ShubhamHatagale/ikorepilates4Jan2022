@@ -6,7 +6,7 @@ function WhyChooseBox(props)
 {
     return(
         <div className="why-choose-box">
-            <img src={props.imgsrc} alt='ico1'  className=''/>
+            <img loading='lazy' src={props.imgsrc} alt='ico1'  className=''/>
             <h5>{props.title}</h5>
             <p>{props.description}</p>
         </div>
@@ -27,7 +27,7 @@ const Whychooseus = () => {
                        opportunity. </p>
                 </div>
                 <div className="col-lg-6 bg-color">
-                    <img src='assets/img/batches-3.png' className='batches-img' alt='batches'/>
+                    <img loading='lazy' src='assets/img/batches-3.png' className='batches-img' alt='batches'/>
                 </div>
             </div>       
           <div className="row">

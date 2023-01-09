@@ -6,7 +6,7 @@ const AboutUsSection = () => {
        <div className='container-fluid'>
             <div className='row'>
                 <div className='col-lg-6 p-0 image_col'>
-                <img src='assets/img/aboutus_img.webp' className='aboutus_img' alt='cta'/>
+                <img loading='lazy' src='assets/img/aboutus_img.webp' className='aboutus_img' alt='cta'/>
 
                   
                 </div>

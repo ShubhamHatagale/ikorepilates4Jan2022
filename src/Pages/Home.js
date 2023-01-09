@@ -1,20 +1,24 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import Slidersection from '../Components/Slidersection';
-import Whychooseus from '../Components/Whychooseus';
-import TeacherTrainingSection from '../Components/TeacherTrainingSection';
-import Testimonial from '../Components/Testimonial';
-import TeacherTrainingBlogs from '../Components/TeacherTrainingBlogs';
-import HomeFormSection from '../Components/HomeFormSection';
+
+const Whychooseus = lazy(() => import('../Components/Whychooseus'))
+const TeacherTrainingSection = lazy(() => import('../Components/TeacherTrainingSection'))
+const Testimonial = lazy(() => import('../Components/Testimonial'))
+const TeacherTrainingBlogs = lazy(() => import('../Components/TeacherTrainingBlogs'))
+const HomeFormSection = lazy(() => import('../Components/HomeFormSection'))
+
 const Home = () => {
   return (
     <div className='home'>
-      <Slidersection/>
-      <Whychooseus/>
-      <TeacherTrainingBlogs/>
-      <TeacherTrainingSection/>
-      <Testimonial/>
-      <HomeFormSection/>
-      
+      <Slidersection />
+      <Suspense fallback={<h1>loading..</h1>}>
+        <Whychooseus />
+        <TeacherTrainingBlogs />
+        <TeacherTrainingSection />
+        <Testimonial />
+        <HomeFormSection />
+      </Suspense>
+
 
     </div>
   )

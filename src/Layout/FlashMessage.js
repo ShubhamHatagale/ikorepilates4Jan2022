@@ -17,7 +17,7 @@ const FlashMessage = () => {
 
   const handleClose = () => {
     setDisableStatus(false)
-    localStorage.setItem("flash", true)
+    // localStorage.setItem("flash", true)
   }
 
   return (

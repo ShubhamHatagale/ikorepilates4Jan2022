@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Breadcrum from '../Components/Breadcrum';
-import ClassMat from '../Components/ClassMat';
-import EquipmentGroup from '../Components/EquipmentGroup';
-import EquipmentPrivate from '../Components/EquipmentPrivate';
+const ClassMat = lazy(() => import('../Components/ClassMat'))
+const EquipmentGroup = lazy(() => import('../Components/EquipmentGroup'))
+const EquipmentPrivate = lazy(() => import('../Components/EquipmentPrivate'))
+
+
 
 const Classes = () => {
   return (
     <div className='classes'>
-    <Breadcrum/>
-    <ClassMat/>
-    <EquipmentGroup/>
-    <EquipmentPrivate/>
+      <Breadcrum />
+      <Suspense fallback={<h1>loading..</h1>}>
+        <ClassMat />
+        <EquipmentGroup />
+        <EquipmentPrivate />
+      </Suspense>
 
     </div>
   )

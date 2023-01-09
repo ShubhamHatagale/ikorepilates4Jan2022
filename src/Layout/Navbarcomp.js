@@ -11,7 +11,7 @@ const Navbarcomp = () => {
     <div className='header_sec'>
    <Navbar  expand="lg">
       <Container fluid>
-        <Link className='logo_link' to="/"><img src="assets/img/ikore-pilates-logo.png" className="logo_img" alt=""/></Link>
+        <Link className='logo_link' to="/"><img src="assets/img/ikore-pilates-logo.png" loading='lazy' className="logo_img" alt=""/></Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

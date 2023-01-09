@@ -17,7 +17,7 @@ const ClassMat = () => {
                   </div>
                 </div>
                 <div className='col-lg-4 p-0 image_col'>
-                <img src='assets/img/class_mat.webp' className='class_right_img' alt='cta'/>
+                <img loading='lazy' src='assets/img/class_mat.webp' className='class_right_img' alt='cta'/>
 
                   
                 </div>

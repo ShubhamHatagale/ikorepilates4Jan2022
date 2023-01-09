@@ -6,7 +6,7 @@ const EquipmentGroup = () => {
         <div className='container-fluid hide_mobile'>
             <div className='row'>
             <div className='col-lg-4 p-0'>
-                <img src='assets/img/ft_gal_img6.webp' className='class_left_img' alt='cta'/>
+                <img loading='lazy' src='assets/img/ft_gal_img6.webp' className='class_left_img' alt='cta'/>
 
                   
                 </div>
@@ -36,7 +36,7 @@ strength flexibility but also on aligning your body,agility, prioprioception, re
                   </div>
                 </div>
                 <div className='col-lg-4 p-0'>
-                <img src='assets/img/ft_gal_img6.webp' className='class_left_img' alt='cta'/>
+                <img loading='lazy' src='assets/img/ft_gal_img6.webp' className='class_left_img' alt='cta'/>
             </div>
                 
             </div>

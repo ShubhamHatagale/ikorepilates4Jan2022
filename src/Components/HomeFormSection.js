@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -8,30 +8,29 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaListAlt } from "react-icons/fa";
-import { json } from 'react-router-dom';
 import TeacherTrainingBlogsData from './TeacherTrainingBlogsData'
 import { useForm } from 'react-hook-form';
 
 
 const HomeFormSection = (props) => {
-  console.log(Object.keys(props).length)
-  const blogId = Object.keys(props).length > 0 ? props.blogData.blogid : 0;
+  // console.log(Object.keys(props).length)
+  // const blogId = Object.keys(props).length > 0 ? props.blogData.blogid : 0;
 
   // console.log(blogId)
   // latest
-  const { register, handleSubmit,reset, formState: { errors } } = useForm({ mode: "onChange" });
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({ mode: "onChange" });
 
 
   // 3
-  const initialValues = { name: "", email: "", phone: "", course: "", message: "" };
-  const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
+  // const initialValues = { name: "", email: "", phone: "", course: "", message: "" };
+  // const [formValues, setFormValues] = useState(initialValues);
+  // const [formErrors, setFormErrors] = useState({});
+  // const [isSubmit, setIsSubmit] = useState(false);
   const [display, setdisplay] = useState(false);
 
   const API_URL = process.env.REACT_APP_Base_URL;
 
-  
+
 
   const onSubmit = (data) => {
     console.log(data);
@@ -40,11 +39,11 @@ const HomeFormSection = (props) => {
     // return false
 
     var myHeaders = new Headers();
-    myHeaders.append('Content-Type', 'application/json') 
+    myHeaders.append('Content-Type', 'application/json')
     // myHeaders.append("Authorization");
     // myHeaders.append("Authorization", `Basic WXUxOXQxbkUwVGpNd254eUQ5Og==`);
 
-    
+
     fetch(`${API_URL}/enroll/course`,
       {
         method: 'POST',
@@ -57,12 +56,12 @@ const HomeFormSection = (props) => {
         body: JSON.stringify(data)
       }).then((data) => { return data.json() }).then((result) => {
         console.log(result)
-        setIsSubmit(true);
+        // setIsSubmit(true);
         setdisplay(true)
         reset();
 
         setTimeout(() => {
-          setIsSubmit(false);
+          // setIsSubmit(false);
           setdisplay(false)
           // data=[]
           // for (const prop of Object.getOwnPropertyNames(data)) {
@@ -86,9 +85,9 @@ const HomeFormSection = (props) => {
 
           <div className="col-lg-12">
 
-            {display?(<div style={{ textAlign: "center" }}>
+            {display ? (<div style={{ textAlign: "center" }}>
               <p style={{ padding: "5px", width: "30%", position: "relative", left: "36%", color: "white", boxShadow: "1px 1px gray", borderRadius: "4px", background: "#ed8c13", height: "41px" }}>Thank you for contacting us</p>
-            </div>):null}
+            </div>) : null}
 
             <Form className='home_form' onSubmit={handleSubmit(onSubmit)}>
               <Row className="mb-2 home_from_row">
@@ -140,7 +139,9 @@ const HomeFormSection = (props) => {
                     <option value=""></option>
                     {TeacherTrainingBlogsData.map((item, id) => {
                       return (
-                        <option selected={item.id == blogId ? true : false} value={item.post_title}>{item.post_title}</option>
+                        <option
+                          // selected={item.id == blogId ? true : false}
+                          value={item.post_title}>{item.post_title}</option>
                       )
                     })}
                   </Form.Select>

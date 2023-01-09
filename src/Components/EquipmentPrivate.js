@@ -16,7 +16,7 @@ CONTACTS</p>
                   </div>
                 </div>
                 <div className='col-lg-4 p-0'>
-                <img src='assets/img/class_Equipment Private.webp' className='class_right_img' alt='cta'/>
+                <img loading='lazy' src='assets/img/class_Equipment Private.webp' className='class_right_img' alt='cta'/>
 
                   
                 </div>

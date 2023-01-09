@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 function TermsPolicy() {
+    window.scrollTo(0, 0);
 
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, [])
 
     return (
         <div>
@@ -17,7 +17,9 @@ function TermsPolicy() {
             <div className="privacy_content_para">
 
                 <div className="privacy_content">
-                    <div> <div><h2>PRIVACY POLICY</h2></div></div>
+                    {/* <div> <div><h2>PRIVACY POLICY</h2></div></div> */}
+                    <h2 className='headings'>PRIVACY POLICY</h2>
+
                     <div className='para'>
                         <div>
                             <p>Our privacy policy mentions the collection, usage, and disclosure of your personal data when you use Ikore services.</p>
@@ -30,7 +32,7 @@ function TermsPolicy() {
 
                         <div>
                             <p>
-                                We use “cookies” and we obtain certain information when you access  https://www.ikorepilates.in/
+                                We use “cookies” and we obtain certain information when you access   <a href='https://www.ikorepilates.in/'> https://www.ikorepilates.in/</a>
                             </p>
                         </div>
                         <div>

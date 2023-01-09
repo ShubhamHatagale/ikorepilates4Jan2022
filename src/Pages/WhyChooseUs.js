@@ -1,15 +1,14 @@
-import React from 'react'
-import OurTeamBreadCrum from '../Components/OurTeamBreadCrum'
-import TestimonialData from '../Components/TestimonialData'
-import Testimonialsvideo from '../Components/Testimonialsvideo'
-import WhyChooseUsBreadCum from '../Components/WhyChooseUsBreadCum'
+import React, { lazy, Suspense } from 'react'
+// import WhyChooseUsBreadCum from '../Components/WhyChooseUsBreadCum'
 
-
+const WhyChooseUsBreadCum=lazy(()=>import("../Components/WhyChooseUsBreadCum"))
 // end
 const WhyChoose = () => {
     return (
         <div className='testimonilasvdo'>
-            <WhyChooseUsBreadCum />
+            <Suspense fallback={<h1>loading..</h1>}>
+                <WhyChooseUsBreadCum />
+            </Suspense>
             {/* <WhyChoosesvideo /> */}
         </div>
     )

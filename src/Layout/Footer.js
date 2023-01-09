@@ -9,6 +9,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 
 const Footer = () => {
+  
   return (
     <section className='footer_section pd2'>
       <div className="container text-center p-3">

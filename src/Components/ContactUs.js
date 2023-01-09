@@ -146,7 +146,7 @@ const ContactUs = () => {
           </div>
           <div className="col-lg-6 p-0">
             <div className="contact_form_img">
-              <img src="assets/img/contact_img.webp" className="img_contact" alt="" />
+              <img loading='lazy' src="assets/img/contact_img.webp" className="img_contact" alt="" />
             </div>
           </div>
         </div>

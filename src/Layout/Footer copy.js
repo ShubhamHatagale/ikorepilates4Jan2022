@@ -16,15 +16,15 @@ const Footer = () => {
              <div className="col-lg-3">
                  <h3>Gallery</h3>
                  <ul className='ft_gal_ul'>
-                 <li className='ft_gal_li'><Link to="#"><img src='assets/img/ft_gal_img4.webp' alt='gal1'/></Link></li>
-                 <li className='ft_gal_li'><Link to="#"><img src='assets/img/ft_gal_img4.webp' alt='gal2'/></Link></li>
-                 <li className='ft_gal_li'><Link to="#"><img src='assets/img/ft_gal_img4.webp' alt='gal3'/></Link></li>
-                 <li className='ft_gal_li'><Link to="#"><img src='assets/img/ft_gal_img4.webp' alt='gal4'/></Link></li>
-                 <li className='ft_gal_li'><Link to="#"><img src='assets/img/ft_gal_img4.webp' alt='gal5'/></Link></li>
-                 <li className='ft_gal_li'><Link to="#"><img src='assets/img/ft_gal_img4.webp' alt='gal6'/></Link></li>
-                 <li className='ft_gal_li'><Link to="#"><img src='assets/img/ft_gal_img4.webp' alt='gal7'/></Link></li>
-                 <li className='ft_gal_li'><Link to="#"><img src='assets/img/ft_gal_img4.webp' alt='gal8'/></Link></li>
-                 <li className='ft_gal_li'><Link to="#"><img src='assets/img/ft_gal_img4.webp' alt='gal9'/></Link></li>
+                 <li className='ft_gal_li'><Link to="#"><img loading='lazy' src='assets/img/ft_gal_img4.webp' alt='gal1'/></Link></li>
+                 <li className='ft_gal_li'><Link to="#"><img loading='lazy' src='assets/img/ft_gal_img4.webp' alt='gal2'/></Link></li>
+                 <li className='ft_gal_li'><Link to="#"><img loading='lazy' src='assets/img/ft_gal_img4.webp' alt='gal3'/></Link></li>
+                 <li className='ft_gal_li'><Link to="#"><img loading='lazy' src='assets/img/ft_gal_img4.webp' alt='gal4'/></Link></li>
+                 <li className='ft_gal_li'><Link to="#"><img loading='lazy' src='assets/img/ft_gal_img4.webp' alt='gal5'/></Link></li>
+                 <li className='ft_gal_li'><Link to="#"><img loading='lazy' src='assets/img/ft_gal_img4.webp' alt='gal6'/></Link></li>
+                 <li className='ft_gal_li'><Link to="#"><img loading='lazy' src='assets/img/ft_gal_img4.webp' alt='gal7'/></Link></li>
+                 <li className='ft_gal_li'><Link to="#"><img loading='lazy' src='assets/img/ft_gal_img4.webp' alt='gal8'/></Link></li>
+                 <li className='ft_gal_li'><Link to="#"><img loading='lazy' src='assets/img/ft_gal_img4.webp' alt='gal9'/></Link></li>
                  </ul>
              </div>
              <div className="col-lg-3">
