@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
-import HomeFormSectionForModal from './HomeFormSectionForModal';
+// import HomeFormSectionForModal from './HomeFormSectionForModal';
 
+const HomeFormSectionForModal = lazy(() => import("./HomeFormSectionForModal"))
 
 const TeacherTrainingSection = () => {
   const [Display1, setDisplay1] = useState(false);
@@ -12,7 +13,6 @@ const TeacherTrainingSection = () => {
   // const navigate = usenavigate()
   const pushtoContact = (e, post_id) => {
     e.preventDefault()
-    console.log(post_id)
     setblog_id(post_id)
 
     // navigate("/contact-us",{ state: { name:'Xyz' }})
@@ -37,16 +37,16 @@ const TeacherTrainingSection = () => {
 
         <Modal.Body className="success text-center " >
           {/* <HomeFormSection blogData={{ blogid: locationData.state ? locationData.state.enroll_id : 0 }} /> */}
-          <HomeFormSectionForModal blogData={{ blogid: blog_id ? blog_id : 0 }} />
+          <Suspense fallback={<h1>loading..</h1>}>
+            <HomeFormSectionForModal blogData={{ blogid: blog_id ? blog_id : 0 }} />
+          </Suspense>
         </Modal.Body>
 
       </Modal>
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-lg-5 p-0 image_col'>
-            <img src='assets/img/teacher_training_section_img.png' className='training_col_img' alt='cta' />
-
-
+            <img loading='lazy' src='assets/img/teacher_training_section_img.png' className='training_col_img' alt='cta' />
           </div>
           <div className='col-lg-7 p-0'>
             <div className='color_col'>
