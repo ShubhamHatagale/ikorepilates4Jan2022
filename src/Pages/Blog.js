@@ -1,5 +1,5 @@
-import React,{lazy,Suspense} from 'react';
-import ContactBreadcrum from '../Components/ContactBreadcrum';
+import React, { lazy, Suspense } from 'react';
+import BlogBreadcrum from '../Components/BlogBreadcrum';
 // import ContactUs from '../Components/ContactUs';
 // import HomeFormSection from '../Components/HomeFormSection'
 // import ContactDetails from '../Components/ContactDetails';
@@ -7,7 +7,7 @@ import ContactBreadcrum from '../Components/ContactBreadcrum';
 const HomeFormSection = lazy(() => import("../Components/HomeFormSectionForModalTrial"))
 const ContactDetails = lazy(() => import("../Components/ContactDetails"))
 
-const Contact = () => {
+const Blog = () => {
   // console.log(useLocation())
   // const locationData = useLocation()
 
@@ -15,10 +15,10 @@ const Contact = () => {
 
   return (
     <div className='contact'>
-      <ContactBreadcrum />
+      <BlogBreadcrum />
       <Suspense fallback={<h1>loading..</h1>}>
-      <ContactDetails />
-      <div className="container-fluid">
+        {/* <ContactDetails /> */}
+        {/* <div className="container-fluid">
         <div className='row'>
           <div className="col-lg-7 p-0 form_col_pd">
             <HomeFormSection  />
@@ -30,11 +30,11 @@ const Contact = () => {
           </div>
 
         </div>
-      </div>
+      </div> */}
       </Suspense>
 
     </div>
   )
 }
 
-export default Contact
+export default Blog

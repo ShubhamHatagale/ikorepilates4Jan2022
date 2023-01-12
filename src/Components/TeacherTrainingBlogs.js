@@ -52,6 +52,7 @@ function BlogsBox(props) {
       </Link>
       <Link href={props.post_title_link}><h4 className='post_title'>{props.post_title}</h4></Link>
       <p>{props.post_description}</p>
+      {/* <p>Upcoming Date -</p> */}
       <Link onClick={(e) => pushtoContact(e, props.post_btn_id)} className="btn-slider"> Enroll Now</Link>
     </div>
   )
@@ -66,10 +67,10 @@ const TeacherTrainingBlogs = () => {
         <div className="row">
           <h2 className='headings text-center pd4'>Pilates Teacher Training Program</h2>
           <p className='text-center'>Pilates Teacher Training Program is an internationally recognised Pilates certification
-            program offering comprehensive MAT & APPARATUS training through academic course work and
+            program offering comprehensive MAT & EQUIPMENT training through academic course work and
             experiential learning. The foundation and advanced level of the MAT program can be attended
-            virtually. However, the APPARATUS program is taught in an exclusive Pilates studio equipped
-            with top of the line Balanced Body apparatus from the USA.</p>
+            virtually. However, the EQUIPMENT program is taught in an exclusive Pilates studio equipped
+            with top of the line Balanced Body EQUIPMENT from the USA.</p>
         </div>
 
         <div className="row">

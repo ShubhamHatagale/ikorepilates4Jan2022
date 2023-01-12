@@ -20,7 +20,7 @@ const Slidersection = () => {
     setDisplay1(true)
   }
   return (
-    //  <!-- ======= Hero Section ======= -->
+    //  <!-- ======= Hero Section ======= --> 
     <section id="hero_classes" className="d-flex align-items-center">
       {/* <div id="hero_classes" className="d-flex align-items-center"></div> */}
       {/* <div className='col-lg-8 p-0'>
@@ -60,12 +60,10 @@ const Slidersection = () => {
       <div className="container ">
         <div className="row ">
           <div className="col-lg-6 ">
-            <h1>Excellent Pilates Classes <br></br><span className='dual-text'>Guided by Experts</span></h1>
-            <p><strong>Achieve poise, fitness and balance –</strong>
-              to get the best out of yourself. Let our expert teachers design the
-              perfect program for you. These classes will leave you stronger,
-               longer and leaner, while relieving physical and mental tension so you feel
-               your most confident.
+            <h1>INTERNATIONAL PILATES <br></br><span className='dual-text'>CERTIFICATION</span></h1>
+            <p><strong>The most sought after Pilates certification, iKore Pilates</strong>  is the most trusted Pilates instructor training and Balanced Body,USA Authorised Training Centre
+              founded by Dr. Deepali Gupta (Pilates Ambassador India), who has a proven
+              track-record of training and mentoring over 150+ Pilates instructors globally.
             </p>
             <div className="d-flex">
               <a href="https://www.youtube.com/watch?v=16txccVZSew" className="btn-slider">Play Video</a>
@@ -75,7 +73,7 @@ const Slidersection = () => {
 
 
           <div className='col-lg-6'>
-            <img loading='lazy' src='assets/img/class_banner.webp' className='class_right_img_class' alt='cta' />
+            <img loading='lazy' src='assets/img/Resize_aboutus_img (1).webp' className='class_right_img_about' alt='cta' />
 
           </div>
 

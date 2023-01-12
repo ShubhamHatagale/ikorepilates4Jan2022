@@ -5,7 +5,7 @@ const CopyRightFooter = () => {
        <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
-                <p>© Copyright {new Date().getFullYear()} iKORE Pilates All Rights Reserved.</p>
+                <p>© Copyright {new Date().getFullYear()} BE FIT WELLNESS SOLUTION LLP All Rights Reserved.</p>
             </div>
             {/* <div className="col-lg-6">
                 

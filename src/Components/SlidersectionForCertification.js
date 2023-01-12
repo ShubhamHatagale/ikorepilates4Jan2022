@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 // import HomeFormSectionForModal from './HomeFormSectionForModal';
 const HomeFormSectionForModal = lazy(() => import("./HomeFormSectionForModal"))
 
-const OurTeams = () => {
+const Slidersection = () => {
   const [Display1, setDisplay1] = useState(false);
   const [blog_id, setblog_id] = useState(false);
 
@@ -21,7 +21,22 @@ const OurTeams = () => {
   }
   return (
     //  <!-- ======= Hero Section ======= -->
-    <section id="hero_about" className="d-flex align-items-center">
+    <section id="hero_classes" className="d-flex align-items-center">
+      {/* <div id="hero_classes" className="d-flex align-items-center"></div> */}
+      {/* <div className='col-lg-8 p-0'>
+        <div className='color_class_col'>
+          <h2 className='headings2'>MAT CLASSES</h2>
+          <p>Pilates Mat is done on the floor on a mat. It may include Pilates props like the balls,
+            foam rollers, pilates magic circles and other fitness tools. Batch strength of the class is
+            limited to a maximum of 12 students per batch so that detailed attention can be given to all.
+            Class Level – Expert. Beginner, Intermediate Age Limit – Kids, Adults, Teens.</p>
+
+        </div>
+      </div>
+      <div className='col-lg-4 p-0 image_col'>
+        <img loading='lazy' src='assets/img/class_mat.webp' className='class_right_img' alt='cta' />
+      </div> */}
+
       <Modal
         size="lg"
         show={Display1}
@@ -41,19 +56,27 @@ const OurTeams = () => {
         </Modal.Body>
 
       </Modal>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6">
-            <h1>INTERNATIONAL PILATES <br></br><span className='dual-text'>Our Team</span></h1>
-            <p><strong>Lorem Ipsum is simply dummy text of the printing and typesetting  </strong>industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make
-              a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+      <div className="container ">
+        <div className="row ">
+          <div className="col-lg-6 ">
+            <h1>INTERNATIONAL PILATES <br></br><span className='dual-text'>CERTIFICATION</span></h1>
+            <p><strong>The most sought after Pilates certification, iKore Pilates</strong>  is the most trusted Pilates instructor training and Balanced Body,USA Authorised Training Centre
+              founded by Dr. Deepali Gupta (Pilates Ambassador India), who has a proven
+              track-record of training and mentoring over 150+ Pilates instructors globally.
             </p>
             <div className="d-flex">
               <a href="https://www.youtube.com/watch?v=16txccVZSew" className="btn-slider">Play Video</a>
               <Link onClick={pushtoContact} className="btn-slider"> Enroll Now</Link>
             </div>
           </div>
+
+
+          <div className='col-lg-6'>
+            <img loading='lazy' src='assets/img/slider7.webp' className='class_right_img_certification' alt='cta' />
+
+          </div>
+
 
         </div>
       </div>
@@ -62,6 +85,6 @@ const OurTeams = () => {
   )
 }
 
-export default OurTeams
+export default Slidersection
 
 

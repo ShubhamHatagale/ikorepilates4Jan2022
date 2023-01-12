@@ -60,12 +60,16 @@ const Slidersection = () => {
       <div className="container ">
         <div className="row ">
           <div className="col-lg-6 ">
-            <h1>Excellent Pilates Classes <br></br><span className='dual-text'>Guided by Experts</span></h1>
-            <p><strong>Achieve poise, fitness and balance –</strong>
-              to get the best out of yourself. Let our expert teachers design the
-              perfect program for you. These classes will leave you stronger,
-               longer and leaner, while relieving physical and mental tension so you feel
-               your most confident.
+            <h1>Excellent Pilates Classes <br></br>
+            <span className='dual-text'>Guided by Experts</span></h1>
+            <p>
+              {/* <strong>Achieve poise, fitness and balance –</strong> */}
+              If you are looking for an excellent Pilates class, guided by experts,
+              then you have come to the right place. Our experienced instructors will
+              help you get the most out of your Pilates sessions. With our classes,you
+              can improve your posture, build strength and flexibility, and reduce stress
+              levels. We offer a variety of classes for all levels – from beginner
+              to advanced – so everyone can benefit from our Pilates classes!
             </p>
             <div className="d-flex">
               <a href="https://www.youtube.com/watch?v=16txccVZSew" className="btn-slider">Play Video</a>

@@ -1,6 +1,9 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbarcomp from './Layout/Navbarcomp';
+import Blog from './Pages/Blog';
+import Test1 from './Pages/Test1';
+import Test2 from './Pages/Test2';
 // import Footer from './Layout/Footer';
 // import FlashMessage from './Layout/FlashMessage';
 // import Home from './Pages/Home';
@@ -48,15 +51,22 @@ function Router() {
         <Suspense fallback={<h1>loading..</h1>}>
           <Routes>
             <Route exact path='/' element={<Home />} />
-            <Route exact path='/classes' element={<Classes />} />
+            {/* <Route exact path='/classes' element={<Classes />} /> */}
+            <Route exact path='/classes' element={<Test2 />} />
             <Route exact path='/about' element={<About />} />
+            
             <Route exact path='/testimonials' element={<TestimonialsVdo />} />
             <Route exact path='/cancellation-and-other-policy' element={<Cancellation />} />
             <Route exact path='/contact-us' element={<Contact />} />
             <Route exact path='/our_team' element={<OurTeams />} />
             <Route exact path='/why_choose_us' element={<WhyChooseUs />} />
-            <Route exact path='/certification' element={<Certification />} />
+            {/* <Route exact path='/certification' element={<Certification />} /> */}
             <Route exact path='/terms_policy' element={<TermsPolicy />} />
+            <Route exact path='/certification' element={<Test1 />} />
+            <Route exact path='/blog' element={<Blog />} />
+
+            {/* <Route exact path='/test2' element={<Test2 />} /> */}
+
           </Routes>
         </Suspense>
         <Suspense fallback={<h1>loading..</h1>}>
