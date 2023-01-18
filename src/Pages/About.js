@@ -20,12 +20,7 @@ const Test2 = () => {
       <SlidersectionForAbout />
 
       <Suspense fallback={<h1>loading..</h1>}>
-        {/* <Whychooseus /> */}
-        {/* <TeacherTrainingBlogs /> */}
-
-        {/* <ClassMat />
-        <EquipmentGroup />
-        <EquipmentPrivate /> */}
+        
         <Suspense fallback={<h1>loading..</h1>}>
           <AboutUsSection />
         </Suspense>
