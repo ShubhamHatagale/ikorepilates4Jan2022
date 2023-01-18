@@ -27,12 +27,8 @@ const HomeFormSection = (props) => {
     setVerifed(true);
   }
 
-
-  // 3
   const [display, setdisplay] = useState(false);
-
   const API_URL = process.env.REACT_APP_Base_URL;
-
 
 
   const onSubmit = (data) => {
@@ -60,8 +56,7 @@ const HomeFormSection = (props) => {
         setTimeout(() => {
           setdisplay(false)
         }, 5000);
-        // if (isSubmit)
-        // alert("data is submited");
+        
       }).catch((error) => console.log(error));
   }
 

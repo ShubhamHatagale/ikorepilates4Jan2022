@@ -62,7 +62,7 @@ const Whychooseus = () => {
                 <Link href={"props.post_img_link"} className="post_img_link">
 
                 </Link>
-                <Link href={"props.post_title_link"}><h4 className='post_title'>COUNSELLING PSYCHOLOGIST</h4></Link>
+                <Link href={"props.post_title_link"}><h4 className='post_title'>Counselling Psychologist</h4></Link>
                 <p>Looking for a counsellor psychologist with 0  to 3 years of experience and who is well-versed in social-emotional learning. The candidate will be responsible for offering patient consultations and implementing individualized psychological treatment.</p>
                 <ul><b>JOB DESCRIPTION </b>
                   <li>Listen to patients and identify their core problems.</li>
@@ -98,7 +98,7 @@ const Whychooseus = () => {
                 <Link href={"props.post_img_link"} className="post_img_link">
 
                 </Link>
-                <Link href={"props.post_title_link"}><h4 className='post_title'>FEMALE NUTRITIONIST (Part Time/ Full Time)</h4></Link>
+                <Link href={"props.post_title_link"}><h4 className='post_title'>Female Nutritionist (Part Time/ Full Time)</h4></Link>
                 <p>iKore Pilates is looking for an experienced and energetic nutritionist (0 to 3 years’ experience) who will provide our clients with professional advice on how to implement and maintain a healthy lifestyle. As a specialist in food and nutrition, clients will depend on how you guide them towards better eating and exercise habits.</p>
                 <ul><b>JOB DESCRIPTION </b>
                   <li>Identifying Clients’ dietary needs by assessing their health, exercise routine, and food habits.</li>

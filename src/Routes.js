@@ -3,28 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbarcomp from './Layout/Navbarcomp';
 import Blog from './Pages/Blog';
 import Career from './Pages/Career';
-// import Test1 from './Pages/Test1';
-// import Footer from './Layout/Footer';
-// import FlashMessage from './Layout/FlashMessage';
-// import Home from './Pages/Home';
-// import CopyRightFooter from './Layout/CopyRightFooter';
-// import Classes from './Pages/Classes';
-// import About from './Pages/About';
-// import TestimonialsVdo from './Pages/TestimonialsVdo';
-// import Cancellation from './Pages/Cancellation';
-// import Contact from './Pages/Contact';
-// import OurTeams from './Pages/OurTeams';
-// import WhyChooseUs from './Pages/WhyChooseUs';
-// import Certification from './Pages/Certification';
-// import TermsPolicy from './Layout/TermsPolicy';
-
-// const Navbarcomp = lazy(() => import('./Layout/Navbarcomp'))
 const Home = lazy(() => import('./Pages/Home'))
-
 const Footer = lazy(() => import('./Layout/Footer'))
-
 const CopyRightFooter = lazy(() => import('./Layout/CopyRightFooter'))
-
 const Classes = lazy(() => import('./Pages/Classes'))
 const About = lazy(() => import('./Pages/About'))
 const TestimonialsVdo = lazy(() => import('./Pages/TestimonialsVdo'))
@@ -32,7 +13,7 @@ const Cancellation = lazy(() => import('./Pages/Cancellation'))
 const Contact = lazy(() => import('./Pages/Contact'))
 const OurTeams = lazy(() => import('./Pages/OurTeams'))
 const WhyChooseUs = lazy(() => import('./Pages/WhyChooseUs'))
-const Certification = lazy(() => import('./Pages/Certification'))
+const Education = lazy(() => import('./Pages/Education'))
 const TermsPolicy = lazy(() => import('./Layout/TermsPolicy'))
 
 function Router() {
@@ -62,7 +43,7 @@ function Router() {
             <Route exact path='/why_choose_us' element={<WhyChooseUs />} />
             {/* <Route exact path='/certification' element={<Certification />} /> */}
             <Route exact path='/terms_policy' element={<TermsPolicy />} />
-            <Route exact path='/certification' element={<Certification />} />
+            <Route exact path='/education' element={<Education />} />
             <Route exact path='/blog' element={<Blog />} />
             <Route exact path='/career' element={<Career />} />
 

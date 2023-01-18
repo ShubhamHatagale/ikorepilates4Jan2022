@@ -25,7 +25,7 @@ const Headermenu = () => {
         {/* <li><NavLink activeclassname="active_class" to='/classes'>Classes</NavLink></li> */}
         <li><NavLink activeclassname="active_class" to='/classes' >Classes</NavLink></li>
 
-        <li><NavLink activeclassname="active_class" to='/certification'>Certification</NavLink></li>
+        <li><NavLink activeclassname="active_class" to='/education'>Education</NavLink></li>
         {/* <li><NavHashLink activeclassname="active_class" to='/certification'>Certification</NavHashLink></li> */}
         <li><NavLink activeclassname="active_class" to='/testimonials'>Testimonials</NavLink></li>
         {/* <li><NavLink  activeclassname="active_class" to='/cancellation-and-other-policy'>Cancellation</NavLink></li> */}

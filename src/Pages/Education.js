@@ -8,7 +8,7 @@ const Testimonial = lazy(() => import('../Components/Testimonial'))
 const TeacherTrainingBlogs = lazy(() => import('../Components/TeacherTrainingBlogs'))
 const HomeFormSection = lazy(() => import('../Components/HomeFormSection'))
 
-const Test1 = () => {
+const Education = () => {
   return (
     <div className='home'>
       {/* <Slidersection /> */}
@@ -26,4 +26,4 @@ const Test1 = () => {
   )
 }
 
-export default Test1
+export default Education

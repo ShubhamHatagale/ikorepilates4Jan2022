@@ -1,0 +1,20 @@
+cloudways-
+    link-https://platform.cloudways.com/login
+    username-sgirish11@gmail.com
+    password-C0nversant@14feb
+    ssh-ssh master_ksuckfsyug@64.227.164.53
+    ssh password-Ikore@123
+    backend folder-application/bzrnpdjzmh/
+Database-
+    DB_host=localhost
+    DB_user=bzrnpdjzmh
+    DB=bzrnpdjzmh
+    DB_password=Ikore@123
+
+Pending tasks-
+    -client side captcha site key issue(implemented captcha commented in forms -HomeFormSection-line 173)
+    -seo fixes
+    -All website images should be in webp format
+    -Blogs article onClick redirection to perticular blog
+
+
