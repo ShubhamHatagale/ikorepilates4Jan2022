@@ -19,29 +19,8 @@ const Career = () => {
       <BlogBreadcrum />
 
       <Suspense fallback={<h1>loading..</h1>}>
-        {/* <ContactDetails /> */}
-        {/* <div className="container-fluid">
-        <div className='row'>
-          <div className="col-lg-7 p-0 form_col_pd">
-            <HomeFormSection  />
-          </div>
-          <div className="col-lg-5 p-0">
-            <div className="contact_form_img">
-              <img src="assets/img/test.jpg" loading='lazy' className="img_contact" alt="" />
-            </div>
-          </div>
 
-        </div>
-      </div> */}
-        {/* <div className="container-fluid">
-          <div className='row'>
-            <div className="col-lg-12 p-5 form_col_pd text-center">
-              <h1>Coming Soon</h1>
-            </div>
-           
-          </div>
-        </div> */}
-              <CareerBlocks />
+        <CareerBlocks />
 
       </Suspense>
 
