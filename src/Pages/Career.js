@@ -6,6 +6,7 @@ import BlogBreadcrum from '../Components/CareerBreadcrum';
 // import { useLocation } from 'react-router-dom';
 const HomeFormSection = lazy(() => import("../Components/HomeFormSectionForModalTrial"))
 const ContactDetails = lazy(() => import("../Components/ContactDetails"))
+const CareerBlocks = lazy(() => import("../Components/CareerBlocks"))
 
 const Career = () => {
   // console.log(useLocation())
@@ -16,6 +17,7 @@ const Career = () => {
   return (
     <div className='contact'>
       <BlogBreadcrum />
+
       <Suspense fallback={<h1>loading..</h1>}>
         {/* <ContactDetails /> */}
         {/* <div className="container-fluid">
@@ -31,6 +33,16 @@ const Career = () => {
 
         </div>
       </div> */}
+        {/* <div className="container-fluid">
+          <div className='row'>
+            <div className="col-lg-12 p-5 form_col_pd text-center">
+              <h1>Coming Soon</h1>
+            </div>
+           
+          </div>
+        </div> */}
+              <CareerBlocks />
+
       </Suspense>
 
     </div>

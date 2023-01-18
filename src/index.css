@@ -3,6 +3,20 @@ body {
   padding: 0
 }
 
+.whychooseus {
+  background-color: #f2f2f2;
+}
+
+.blog_img_link img {
+  /* background-color: #69a03230; */
+  padding: 22px 20px;
+  width: 100%
+}
+
+.b_title {
+  color: #69a032;
+}
+
 .headMsgLink,
 a {
   font-weight: 500;
@@ -145,7 +159,9 @@ ul.post_ul {
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
-  padding: 0 12px
+  padding: 0 12px;
+  font-size: 14px;
+
 }
 
 img.logo_img {
@@ -347,16 +363,21 @@ a.btn-book:hover {
   color: #fff !important
 }
 
-
 .d-flex {
   gap: 20px
 }
+
+.header_sec_sub {
+  background-color: #ffffff;
+}
+
 
 img.batches-img {
   width: 100%;
   float: right;
   background-color: #69a03212;
-  padding: 30px 0
+  /* padding: 30px 0 */
+  
 }
 
 .image_col img,
@@ -475,6 +496,14 @@ svg.form_icon_modal {
 
 .home_form .form-control {
   padding: .375rem 2.75rem
+    /* padding: 0.375rem 0.75rem; */
+
+}
+
+.home_form .ddCol {
+  padding: .375rem 0.75rem
+    /* padding: 0.375rem 0.75rem; */
+
 }
 
 .form-control:focus {
@@ -575,9 +604,11 @@ ul.post_ul {
 
 .breadcrum {
   /* background-color: #c1dad7; */
-  padding: 100px;
+  padding: 60px 26px 18px 80px;
   /* background-image: url("/public/assets/img/slider7.webp"); */
-  background-color: #d3e3e2;
+  /* background-color: #ffffff; */
+  background-color: #f2f2f2;
+
   background-size: cover;
   /* height: 80vh; */
   /* height: 105vh; */
@@ -592,13 +623,31 @@ ul.post_ul {
 
 .breadcrum_title {
   position: relative;
-  padding: 100px 0 0
+  padding: 100px 0 0;
+  color: #69a032;
+  /* font-size: 60px; */
+  /* line-height: 70px; */
+  /* font-size: 60px; */
+
+  font-weight: 700
+}
+
+.breadcrum p {
+  margin-left: 0%;
 }
 
 img.aboutus_img {
   width: 100%
 }
+.whychooseus div div div div div {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
+.nh1{
+  font-size: 1.6rem;
+  font-weight: bold
+}
 .about_color_col {
   /* padding: 230px 70px */
   /* padding: 98px 50px */
@@ -610,7 +659,7 @@ img.aboutus_img {
 .color_class_col,
 .contact_form,
 p.cancellation_p.note {
-  background-color: #69a03230
+  background-color: #f2f2f2
 }
 
 img.class_right_img {

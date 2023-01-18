@@ -102,7 +102,8 @@ const Slidersection = () => {
 
       <div className="col-lg-6 bg-text">
         <div>
-          <span className='dual-tex'>Get Fitness, Balance, Poise. Do Pilates today</span>
+          {/* <span className='dual-tex'>Get Fitness, Balance, Poise. Do Pilates today</span> */}
+          <h1 className='dual-tex nh1'>Get Fitness, Balance, Poise. Do Pilates today</h1>
 
           {/* INTERNATIONAL PILATES <br></br> */}
           {/* <span className='dual-tex'>Try Pilates Today</span> */}

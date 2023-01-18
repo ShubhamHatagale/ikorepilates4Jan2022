@@ -10,6 +10,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaListAlt } from "react-icons/fa";
 import TeacherTrainingBlogsData from './TeacherTrainingBlogsData'
 import { useForm } from 'react-hook-form';
+// import { ReCAPTCHA } from 'react-google-recaptcha';
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 const HomeFormSection = (props) => {
@@ -18,7 +20,12 @@ const HomeFormSection = (props) => {
 
   // console.log(blogId)
   // latest
-  const { register, handleSubmit,reset, formState: { errors } } = useForm({ mode: "onChange" });
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({ mode: "onChange" });
+  const [verfied, setVerifed] = useState(false);
+  function onChange(value) {
+    console.log("Captcha value:", value);
+    setVerifed(true);
+  }
 
 
   // 3
@@ -26,7 +33,7 @@ const HomeFormSection = (props) => {
 
   const API_URL = process.env.REACT_APP_Base_URL;
 
-  
+
 
   const onSubmit = (data) => {
     console.log(data);
@@ -38,12 +45,12 @@ const HomeFormSection = (props) => {
     myHeaders.append('Content-Type', 'application/json')
     // myHeaders.append("Authorization", `Basic WXUxOXQxbkUwVGpNd254eUQ5Og==`);
 
-     
+
     fetch(`${API_URL}/enroll/course`,
       {
         method: 'POST',
         headers: myHeaders,
-      
+
         body: JSON.stringify(data)
       }).then((data) => { return data.json() }).then((result) => {
         console.log(result)
@@ -68,13 +75,25 @@ const HomeFormSection = (props) => {
 
           <div className="col-lg-12">
 
-            {display?(<div style={{ textAlign: "center" }}>
+            {/* {display?(<div style={{ textAlign: "center" }}>
               <p style={{ padding: "5px", width: "30%", position: "relative", left: "36%", color: "white", boxShadow: "1px 1px gray", borderRadius: "4px", background: "#ed8c13", height: "41px" }}>Thank you for contacting us</p>
-            </div>):null}
+            </div>):null} */}
+
+            {display ? (<div className='row' style={{ textAlign: "center" }}>
+              <div className='col-lg-4'></div>
+              <div className='col-lg-4'>
+                <p style={{ background: "#ed8c13", color: "white", boxShadow: "1px 1px gray", borderRadius: "4px" }}>
+                  Thank you for getting in touch! <br></br>
+                  One of our colleagues will get back in touch with you soon! Have a great day!
+                </p>
+              </div>
+              <div className='col-lg-4'></div>
+
+            </div>) : null}
 
             <Form className='home_form' onSubmit={handleSubmit(onSubmit)}>
               <Row className="mb-2 home_from_row">
-                
+
                 <Form.Group className='col-md-6' controlId="formGridName">
                   <Form.Label className='modal_label'>Name</Form.Label>
                   <Form.Control
@@ -143,11 +162,18 @@ const HomeFormSection = (props) => {
                   {errors.message && <p className='form_error_message modal_error_msg' >Please Enter Message </p>}
                 </Form.Group>
               </Row>
-           
 
-              <Button className='form_btn' type="submit" >
+              {/* <ReCAPTCHA
+                sitekey={process.env.REACT_APP_SITE_KEY}
+                onChange={onChange}
+              /> */}
+
+              <Button className='form_btn' type="submit"
+                // disabled={!verfied}
+              >
                 Submit
               </Button>
+
             </Form>
 
 

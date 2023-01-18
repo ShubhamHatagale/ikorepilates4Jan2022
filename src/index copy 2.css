@@ -145,6 +145,7 @@ img.logo_img {
   display: flex;
   list-style: none;
   margin-bottom: auto;
+  font-size: 8px;
 }
 
 .navbar_list a {
@@ -348,7 +349,9 @@ svg.form_icon_modal {
 }
 
 .home_form .form-control {
-  padding: 0.375rem 2.75rem;
+  /* padding: 0.375rem 2.75rem; */
+  padding: 0.375rem 75rem;
+
 }
 
 .form-control:focus {

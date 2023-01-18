@@ -80,7 +80,6 @@ const Slidersection = () => {
 
           <div className='col-lg-6'>
             <img loading='lazy' src='assets/img/class_banner.webp' className='class_right_img_class' alt='cta' />
-
           </div>
 
 

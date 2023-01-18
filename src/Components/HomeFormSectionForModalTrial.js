@@ -10,6 +10,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaListAlt } from "react-icons/fa";
 import TeacherTrainingBlogsData from './TeacherTrainingBlogsData'
 import { useForm } from 'react-hook-form';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const HomeFormSection = (props) => {
@@ -23,6 +24,12 @@ const HomeFormSection = (props) => {
 
   // 3
   const [display, setdisplay] = useState(false);
+
+  const [verfied, setVerifed] = useState(false);
+  function onChange(value) {
+    console.log("Captcha value:", value);
+    setVerifed(true);
+  }
 
   const API_URL = process.env.REACT_APP_Base_URL;
 
@@ -43,7 +50,6 @@ const HomeFormSection = (props) => {
       {
         method: 'POST',
         headers: myHeaders,
-
         body: JSON.stringify(data)
       }).then((data) => { return data.json() }).then((result) => {
         console.log(result)
@@ -68,8 +74,20 @@ const HomeFormSection = (props) => {
 
           <div className="col-lg-12">
 
-            {display ? (<div style={{ textAlign: "center" }}>
+            {/* {display ? (<div style={{ textAlign: "center" }}>
               <p style={{ padding: "5px", width: "30%", position: "relative", left: "36%", color: "white", boxShadow: "1px 1px gray", borderRadius: "4px", background: "#ed8c13", height: "41px" }}>Thank you for contacting us</p>
+            </div>) : null} */}
+
+            {display ? (<div className='row' style={{ textAlign: "center" }}>
+              <div className='col-lg-4'></div>
+              <div className='col-lg-4'>
+                <p style={{ background: "#ed8c13", color: "white", boxShadow: "1px 1px gray", borderRadius: "4px" }}>
+                  Thank you for getting in touch! <br></br>
+                  One of our colleagues will get back in touch with you soon! Have a great day!
+                </p>
+              </div>
+              <div className='col-lg-4'></div>
+
             </div>) : null}
 
             <Form className='home_form' onSubmit={handleSubmit(onSubmit)}>
@@ -105,36 +123,33 @@ const HomeFormSection = (props) => {
                 <Form.Group className='col-md-6' controlId="formGridPhone">
                   <Form.Label className='modal_label'>Phone</Form.Label>
                   <Form.Control
-                    type="number"
-                    {...register('phone', { required: true, maxLength: 10, minLength: 10, })}
+                    type="text"
+                    // {...register('phone', { required: true, maxLength: 10, minLength: 10, })}
+                    // {...register('phone', { required: true, maxLength: 10, minLength: 10, })}
+                    {...register('phone', { required: true })}
+
                     name="phone"
                     placeholder="Enter Phone Number" />
                   <FaPhoneAlt className='form_icon_modal' />
-                  {errors.phone && <p className='form_error_message modal_error_msg'>Please Enter 10 Digit Phone Number</p>}
+                  {/* {errors.phone && <p className='form_error_message modal_error_msg'>Please Enter 10 Digit Phone Number</p>} */}
                 </Form.Group>
 
-                {/* <Form.Group className='col-md-6' controlId="formGridState">
-                  <Form.Label className='modal_label'>Course</Form.Label>
-                  <Form.Select
-                    name="course"
-                    {...register('course', { required: true })}
+                <Form.Control
+                  type="hidden"
+                  {...register('course', { required: true, pattern: [/[a-z]/, /[A-Z]/, /[0-9]/] })}
+                  name="course"
+                  placeholder="Enter text"
+                  value="null"
+                />
 
-                  >
-                    <option value=""></option>
-                    {TeacherTrainingBlogsData.map((item, id) => {
-                      return (
-                        <option selected={item.id === blogId ? true : false} value={item.post_title}>{item.post_title}</option>
-                      )
-                    })}
-                  </Form.Select>
-                  <FaListAlt className='form_icon_modal' />
-                  {errors.course && <p className='form_error_message modal_error_msg'>Please Select Course </p>}
-                </Form.Group> */}
+                {/* <FaListAlt className='form_icon_modal' /> */}
+                {/* {errors.course && <p className='form_error_message modal_error_msg'>Please Select Course </p>} */}
 
 
-                <Form.Group as={Col} className='col-md-6'  controlId="formGridPhone">
+                <Form.Group as={Col} className='col-md-6' controlId="formGridPhone">
                   <Form.Label className='modal_label'>Message</Form.Label>
                   <Form.Control
+                    className="ddCol"
                     as="textarea" rows={3}
                     {...register('message', { required: true, pattern: [/[a-z]/, /[A-Z]/, /[0-9]/] })}
                     name="message"
@@ -144,10 +159,15 @@ const HomeFormSection = (props) => {
               </Row>
 
 
+              {/* <ReCAPTCHA
+                sitekey={process.env.REACT_APP_SITE_KEY}
+                onChange={onChange}
+              /> */}
 
 
-
-              <Button className='form_btn' type="submit" >
+              <Button className='form_btn' type="submit"
+                // disabled={!verfied}
+              >
                 Submit
               </Button>
             </Form>

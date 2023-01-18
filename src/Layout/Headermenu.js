@@ -7,8 +7,8 @@ import "../App.css";
 
 const Headermenu = () => {
   return (
-    <div className='top_menu'>
-      <ul className='navbar_list'>
+    <div className='top_menu' >
+      <ul className='navbar_list' >
         <li><NavHashLink activeclassname="active_class" to='/'>Home</NavHashLink></li>
         <li>
           {/* <NavLink activeclassname="active_class" to='/about'> */}
@@ -30,7 +30,7 @@ const Headermenu = () => {
         <li><NavLink activeclassname="active_class" to='/testimonials'>Testimonials</NavLink></li>
         {/* <li><NavLink  activeclassname="active_class" to='/cancellation-and-other-policy'>Cancellation</NavLink></li> */}
         <li><NavLink activeclassname="active_class" to='/blog'>Blog</NavLink></li>
-        <li><NavLink activeclassname="career" to='/blog'>Career</NavLink></li>
+        <li><NavLink activeclassname="career" to='/career'>Career</NavLink></li>
 
         <li><NavLink activeclassname="active_class" to='/contact-us'>Contact</NavLink></li>
 

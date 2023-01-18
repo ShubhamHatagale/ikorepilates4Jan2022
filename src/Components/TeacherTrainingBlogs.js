@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import TeacherTrainingBlogsData from './TeacherTrainingBlogsData'
 import { Modal } from 'react-bootstrap';
-import { useState } from 'react';
+import { useState } from 'react'; 
 // import HomeFormSectionForModal from './HomeFormSectionForModal';
 
 const HomeFormSectionForModal = lazy(() => import("./HomeFormSectionForModal"))
@@ -10,6 +10,7 @@ const HomeFormSectionForModal = lazy(() => import("./HomeFormSectionForModal"))
 function BlogsBox(props) {
   const [Display1, setDisplay1] = useState(false);
   const [blog_id, setblog_id] = useState(false);
+  
   // const TeacherTrainingBlogsData=lazy(()=>import("./TeacherTrainingBlogsData"))
   // const navigate = usenavigate()
   const pushtoContact = (e, post_id) => {
