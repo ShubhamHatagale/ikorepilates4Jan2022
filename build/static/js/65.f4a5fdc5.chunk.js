@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkikore_pilates=self.webpackChunkikore_pilates||[]).push([[65],{1065:function(e,n,s){s.r(n);var i=s(2791),l=s(184),a=(0,i.lazy)((function(){return s.e(67).then(s.bind(s,5067))}));n.default=function(){return(0,l.jsx)("div",{className:"testimonilasvdo",children:(0,l.jsx)(i.Suspense,{fallback:(0,l.jsx)("h1",{children:"loading.."}),children:(0,l.jsx)(a,{})})})}}}]);
+//# sourceMappingURL=65.f4a5fdc5.chunk.js.map

@@ -564,6 +564,13 @@ button.form_btn.btn.btn-primary:hover {
   width: 100%
 }
 
+.post_career img {
+  /* background-color: #69a03230; */
+  padding: 0px 0px;
+  width: 100%
+}
+
+
 .post_title {
   padding-top: 20px;
   font-size: 26px;

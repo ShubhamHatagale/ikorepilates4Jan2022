@@ -59,7 +59,8 @@ const Whychooseus = () => {
 
               <div className="post_box">
 
-                <Link href={"props.post_img_link"} className="post_img_link">
+                <Link href={"props.post_img_link"} className="post_career">
+                  <img loading='lazy' src="assets/img/career_img.png" alt='movement' />
 
                 </Link>
                 <Link href={"props.post_title_link"}><h4 className='post_title'>Counselling Psychologist</h4></Link>

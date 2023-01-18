@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkikore_pilates=self.webpackChunkikore_pilates||[]).push([[112],{5112:function(e,s,i){i.r(s);i(2791);var l=i(184);s.default=function(){return(0,l.jsx)("section",{className:"copy_right_footer",children:(0,l.jsx)("div",{className:"container",children:(0,l.jsx)("div",{className:"row",children:(0,l.jsx)("div",{className:"col-lg-12 text-center",children:(0,l.jsxs)("p",{children:["\xa9 Copyright ",(new Date).getFullYear()," BE FIT WELLNESS SOLUTION LLP All Rights Reserved."]})})})})})}}}]);
+//# sourceMappingURL=112.b06916d0.chunk.js.map
