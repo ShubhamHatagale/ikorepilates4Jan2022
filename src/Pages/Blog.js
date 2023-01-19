@@ -23,20 +23,7 @@ const Blog = () => {
       <Suspense fallback={<h1>loading..</h1>}>
         {/* <Whychooseus /> */}
         <BlogsArticles />
-        {/* <TeacherTrainingSection /> */}
-        {/* <Testimonial /> */}
-        {/* <HomeFormSection /> */}
-        {/* <div className="container-fluid">
-          <div className='row'>
-            <div className="col-lg-12 p-5 form_col_pd text-center">
-              <h1>Coming Soon</h1>
-            </div>
-            <div className="col-lg-12 p-0">
-
-            </div>
-
-          </div>
-        </div> */}
+        
       </Suspense>
 
     </div>
