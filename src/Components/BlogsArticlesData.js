@@ -10,7 +10,7 @@ const $BlogsArticlesData = [
         heading_para2: 'The Best Exercises & Workouts for Strengthening Your Core & Spine with Pilates',
         para2: 'Pilates strengthens your core and spine and reduces pain from sciatica. Pilates exercises are designed to target the muscles in your lower back, hips, and abdominals that support your spine. These exercises can help improve posture, balance, flexibility, strength, and overall well-being. Pilates can also be used to relieve sciatica nerve pain by targeting the muscles that support the sciatic nerve. By strengthening these key areas of your body with Pilates exercises, you can reduce pain from sciatica and improve overall spinal health.',
         heading_para3: 'How To Get Started with Pilates to Treat Your Scoliotic Curves?',
-        pra3: "Pilates is a great way to help treat scoliotic curves. It helps to strengthen the muscles around the spine, improve posture and flexibility, and reduce pain. But getting started with Pilates can be intimidating if you don't know where to begin. iKore Pilates, with its expert instructors, can assist you with the right guidance and routine that will help you manage the scoliotic curves and improve your overall health.",
+        para3: "Pilates is a great way to help treat scoliotic curves. It helps to strengthen the muscles around the spine, improve posture and flexibility, and reduce pain. But getting started with Pilates can be intimidating if you don't know where to begin. iKore Pilates, with its expert instructors, can assist you with the right guidance and routine that will help you manage the scoliotic curves and improve your overall health.",
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const $BlogsArticlesData = [
         heading_para2: <br></br>,
         para2: <br></br>,
         heading_para3: <br></br>,
-        pra3: <br></br>
+        para3: <br></br>
     },
 
     {
@@ -37,7 +37,7 @@ const $BlogsArticlesData = [
         heading_para2: "The Benefits of Pilates For Sporting Performance And Overall Fitness",
         para2: 'Pilates is a form of exercise that offers many benefits for athletes and anyone looking to improve their physical performance. Virat Kohli, Hardik Pandya, Mahesh Bhupathi, and Sania Mirza are a few among the many sports personalities who have incorporated Pilates into their fitness regime. Pilates can also help athletes improve their sports performance by increasing strength, balance, agility, coordination, and endurance. Additionally, it can help reduce the risk of injuries by improving posture and body alignment. With regular practice of Pilates exercises, athletes will see an improvement in overall fitness as well as sports performance.',
         heading_para3: 'What are the Different Types of Pilate Exercises, and How do you Choose the Right One?',
-        pra3: 'Pilates focuses on strengthening the body while improving flexibility and balance. It can be done at home or at a pilates studio like iKore Pilates. iKore Pilates is becoming increasingly popular as people look for ways to stay fit and healthy. But with so many different types of Pilates exercises available, it can be hard to know which one is right for you. The expert pilates instructors from iKorePilates will assist you in exploring the different types of Pilates exercises and provide tips on choosing the right one to actualize your dream for a fit and healthy body.'
+        para3: 'Pilates focuses on strengthening the body while improving flexibility and balance. It can be done at home or at a pilates studio like iKore Pilates. iKore Pilates is becoming increasingly popular as people look for ways to stay fit and healthy. But with so many different types of Pilates exercises available, it can be hard to know which one is right for you. The expert pilates instructors from iKorePilates will assist you in exploring the different types of Pilates exercises and provide tips on choosing the right one to actualize your dream for a fit and healthy body.'
     },
     {
         id: 4,
@@ -50,7 +50,7 @@ const $BlogsArticlesData = [
         heading_para2: "Precautions to Take When Practicing Pilates in Pregnancy",
         para2: "Pregnancy is a special time for women, and it is important to take extra precautions when engaging in physical activities such as Pilates. Pilates can be a great way to stay fit during pregnancy, but there are certain precautions that one should take in order to ensure the safety of both mother and the baby. Pregnant women should be careful not to over-exert themselves or stretch too much. And once the mother gets to 16 weeks of pregnancy, she should avoid exercises where she has to lie on her back. As with all exercises during pregnancy, if the mother feels any pain, it's important to stop immediately.If one is already doing a non- pregnancy Pilates class, the instructor should be informed about the pregnancy as the instructor is trained to work with women during pregnancy.",
         heading_para3: 'Recommended Routines & Exercises for Pilates in Pregnancy',
-        pra3: 'The recommended routines & exercises for Pilates in pregnancy are altered to the needs of each individual woman. These exercises focus on strengthening the pelvic floor muscles, improving posture, increasing flexibility and balance, reducing stress levels and promoting relaxation. They also help to prepare the body for labor by building strength in the abdominal muscles. With these routines & exercises, pregnant women can enjoy a safe and comfortable pregnancy with improved physical health. At iKore Pilates, the instructors are fully trained to recommend routines and exercises during pregnancy and will assist the pregnant women to be able to stay active while also helping the body prepare for childbirth.'
+        para3: 'The recommended routines & exercises for Pilates in pregnancy are altered to the needs of each individual woman. These exercises focus on strengthening the pelvic floor muscles, improving posture, increasing flexibility and balance, reducing stress levels and promoting relaxation. They also help to prepare the body for labor by building strength in the abdominal muscles. With these routines & exercises, pregnant women can enjoy a safe and comfortable pregnancy with improved physical health. At iKore Pilates, the instructors are fully trained to recommend routines and exercises during pregnancy and will assist the pregnant women to be able to stay active while also helping the body prepare for childbirth.'
     },
 
 

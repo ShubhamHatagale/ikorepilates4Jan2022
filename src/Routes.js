@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbarcomp from './Layout/Navbarcomp';
 import Blog from './Pages/Blog';
+// import BlogView from './Pages/BlogView';
 import Career from './Pages/Career';
 const Home = lazy(() => import('./Pages/Home'))
 const Footer = lazy(() => import('./Layout/Footer'))
@@ -15,6 +16,7 @@ const OurTeams = lazy(() => import('./Pages/OurTeams'))
 const WhyChooseUs = lazy(() => import('./Pages/WhyChooseUs'))
 const Education = lazy(() => import('./Pages/Education'))
 const TermsPolicy = lazy(() => import('./Layout/TermsPolicy'))
+const BlogView = lazy(() => import('./Components/BlogView'))
 
 function Router() {
   return (
@@ -35,7 +37,6 @@ function Router() {
             {/* <Route exact path='/classes' element={<Classes />} /> */}
             <Route exact path='/classes' element={<Classes />} />
             <Route exact path='/about' element={<About />} />
-            
             <Route exact path='/testimonials' element={<TestimonialsVdo />} />
             <Route exact path='/cancellation-and-other-policy' element={<Cancellation />} />
             <Route exact path='/contact-us' element={<Contact />} />
@@ -46,6 +47,7 @@ function Router() {
             <Route exact path='/education' element={<Education />} />
             <Route exact path='/blog' element={<Blog />} />
             <Route exact path='/career' element={<Career />} />
+            <Route exact path='/blog_view' element={<BlogView />} />
 
             {/* <Route exact path='/test2' element={<Test2 />} /> */}
 

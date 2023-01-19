@@ -2,19 +2,49 @@ cloudways-
     link-https://platform.cloudways.com/login
     username-sgirish11@gmail.com
     password-C0nversant@14feb
+
+    applications -
+            portal-Frontend
+            backend-Frontend
+
     ssh-ssh master_ksuckfsyug@64.227.164.53
     ssh password-Ikore@123
-    backend folder-application/bzrnpdjzmh/
+
+    Backend folder path-application/bzrnpdjzmh/public_html/
+    Frontend folder path-applications/mvaumrvpyf/public_html/
+
 Database-
-    DB_host=localhost
+    url-https://phpstack-899220-3121256.cloudwaysapps.com/phpmyadmin
     DB_user=bzrnpdjzmh
-    DB=bzrnpdjzmh
     DB_password=Ikore@123
 
-Pending tasks-
-    -client side captcha site key issue(implemented captcha commented in forms -HomeFormSection-line 173)
-    -seo fixes
-    -All website images should be in webp format
-    -Blogs article onClick redirection to perticular blog
+After login using ssh
+To Deploy Frontend Steps-
+   1.git clone https://github.com/ShubhamHatagale/ikorepilates4Jan2022.git
+   2.username for 'https://github.com':ShubhamHatagale
+   3.Password for 'https://ShubhamHatagale@github.com':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
+   2.ls
+   3.cd applications/mvaumrvpyf/public_html/
+                                -cp -r /home/master/ikorepilates4Jan2022/build/* .
+                                -chmod -R 755 * && chmod -R 777 static/ assets/
+    4.exit
+
+To Deploy backend Steps-
+   1.git clone https://github.com/ShubhamHatagale/backend_ikore.git
+   2.username for 'https://github.com':ShubhamHatagale
+   3.Password for 'https://ShubhamHatagale@github.com':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
+   4.ls
+   5.cd applications/bzrnpdjzmh/public_html/
+   6.pm2 status
+   7.pm2 stop app.js
+   8.cp -r /home/master/backend_ikore/* .
+   9.npm i 
+   10.pm2 start app.js
+   11.exit
+
+
+
+
+
 
 

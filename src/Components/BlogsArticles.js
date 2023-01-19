@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Collapse } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import WhyChooseUsData from './WhyChooseUsData';
 import BlogsArticlesData from './BlogsArticlesData';
 
@@ -11,10 +11,12 @@ const Whychooseus = () => {
   const [open1, setOpen1] = useState()
   const [open2, setOpen2] = useState()
   const [open3, setOpen3] = useState()
+  const navigate = useNavigate();
 
-
-  const BlogRedirect=(e)=>{
+  const BlogRedirect = (e) => {
     console.log(e.target.id)
+    navigate("/contact-us", { state: { name: 'Xyz' } })
+
   }
 
   return (
@@ -26,8 +28,8 @@ const Whychooseus = () => {
             <h4 className='post_title b_title'>{BlogsArticlesData[0].title}</h4>
             <h6>{BlogsArticlesData[0].sub_title}</h6>
 
-            <Link className="blog_img_link">
-              <img loading='lazy' src={BlogsArticlesData[0].imgsrc} onClick={BlogRedirect} id={BlogsArticlesData[0]} alt='movement' />
+            <Link className="blog_img_link" to="/blog_view" state={{ id: 0 }} >
+              <img loading='lazy' src={BlogsArticlesData[0].imgsrc} alt='movement' />
             </Link>
 
             <p>{BlogsArticlesData[0].desc} <Link onClick={() => setOpen(!open)} style={{ color: "blue" }}>Read More</Link></p>
@@ -57,9 +59,9 @@ const Whychooseus = () => {
           <div className='col-lg-5 mt-5 '>
             <h4 className='post_title b_title'>{BlogsArticlesData[1].title}</h4>
             <h6>{BlogsArticlesData[1].sub_title}</h6>
-    
-            <Link className="blog_img_link mt-5" >
-              <img loading='lazy' src={BlogsArticlesData[1].imgsrc} onClick={BlogRedirect} id={BlogsArticlesData[1]} alt='movement' />
+
+            <Link className="blog_img_link mt-5" to="/blog_view" state={{ id: 1 }}>
+              <img loading='lazy' src={BlogsArticlesData[1].imgsrc} alt='movement' />
             </Link>
 
             <p>{BlogsArticlesData[1].desc} <Link onClick={() => setOpen1(!open1)} style={{ color: "blue" }}>Read More</Link></p>
@@ -90,8 +92,8 @@ const Whychooseus = () => {
             <h4 className='post_title b_title'>{BlogsArticlesData[2].title}</h4>
             <h6>{BlogsArticlesData[2].sub_title}</h6>
 
-            <Link className="blog_img_link">
-              <img loading='lazy' src={BlogsArticlesData[2].imgsrc} onClick={BlogRedirect} id={BlogsArticlesData[2]} alt='movement' />
+            <Link className="blog_img_link" to="/blog_view" state={{ id: 2 }}>
+              <img loading='lazy' src={BlogsArticlesData[2].imgsrc} alt='movement' />
             </Link>
 
             <p>{BlogsArticlesData[2].desc} <Link onClick={() => setOpen2(!open2)} style={{ color: "blue" }}>Read More</Link></p>
@@ -109,21 +111,21 @@ const Whychooseus = () => {
 
                 <div>
                   <b>{BlogsArticlesData[2].heading_para3}</b>
-                  <p>{BlogsArticlesData[2].pra3}</p>
+                  <p>{BlogsArticlesData[2].para3}</p>
                 </div>
               </p>
 
             </Collapse>
           </div>
-          
+
           <div className='col-lg-2 mt-5'></div>
 
           <div className='col-lg-5 mt-5 '>
             <h4 className='post_title b_title'>{BlogsArticlesData[3].title}</h4>
             <h6>{BlogsArticlesData[3].sub_title}</h6>
 
-            <Link className="blog_img_link">
-              <img loading='lazy' src={BlogsArticlesData[3].imgsrc} onClick={BlogRedirect} id={BlogsArticlesData[3]} alt='movement' />
+            <Link className="blog_img_link" to="/blog_view" state={{ id: 3 }}>
+              <img loading='lazy' src={BlogsArticlesData[3].imgsrc} alt='movement' />
             </Link>
 
             <p>{BlogsArticlesData[3].desc} <Link onClick={() => setOpen3(!open3)} style={{ color: "blue" }}>Read More</Link></p>
@@ -141,7 +143,7 @@ const Whychooseus = () => {
 
                 <div>
                   <b>{BlogsArticlesData[3].heading_para3}</b>
-                  <p>{BlogsArticlesData[3].pra3}</p>
+                  <p>{BlogsArticlesData[3].para3}</p>
                 </div>
               </p>
 
